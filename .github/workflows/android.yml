@@ -12,6 +12,8 @@ jobs:
     name: Generate Debug APK
     runs-on: ubuntu-latest
     steps:
+    - env:
+       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Checkout the code
       uses: actions/checkout@v2
 
